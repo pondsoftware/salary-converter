@@ -9,6 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.svg",
+  },
   title: "Salary Converter — Hourly, Weekly, Monthly, Yearly",
   description:
     "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
