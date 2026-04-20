@@ -92,6 +92,9 @@ export default function SalaryConverter() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <h1 className="text-3xl font-bold text-gray-900 mb-3">
+        Salary to Hourly Converter
+      </h1>
       <p className="text-gray-600 mb-8">
         Convert your pay between hourly, daily, weekly, biweekly, monthly, and
         annual amounts. Adjust work hours, PTO, and holidays to see your real
