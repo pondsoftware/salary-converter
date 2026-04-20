@@ -22,6 +22,36 @@ function formatCurrency(value: number): string {
   }).format(value);
 }
 
+function calculateTakeHome(annual: number) {
+  // Federal tax brackets (2024, single filer)
+  let federalTax = 0;
+  const brackets = [
+    { limit: 11600, rate: 0.1 },
+    { limit: 47150, rate: 0.12 },
+    { limit: 100525, rate: 0.22 },
+    { limit: 191950, rate: 0.24 },
+    { limit: 243725, rate: 0.32 },
+    { limit: 609350, rate: 0.35 },
+    { limit: Infinity, rate: 0.37 },
+  ];
+
+  let remaining = annual;
+  let prev = 0;
+  for (const bracket of brackets) {
+    const taxable = Math.min(remaining, bracket.limit - prev);
+    if (taxable <= 0) break;
+    federalTax += taxable * bracket.rate;
+    remaining -= taxable;
+    prev = bracket.limit;
+  }
+
+  const fica = annual * 0.0765;
+  const takeHome = annual - federalTax - fica;
+  const effectiveRate = annual > 0 ? ((federalTax + fica) / annual) * 100 : 0;
+
+  return { federalTax, fica, takeHome, effectiveRate };
+}
+
 export default function SalaryConverter() {
   const [inputMode, setInputMode] = useState<InputMode>("annual");
   const [amount, setAmount] = useState(60000);
@@ -262,6 +292,43 @@ export default function SalaryConverter() {
           </p>
         </div>
       </div>
+
+      {/* Estimated Take-Home */}
+      {(() => {
+        const { federalTax, fica, takeHome, effectiveRate } = calculateTakeHome(conversions.annual);
+        return (
+          <div className="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+              Estimated Take-Home Pay
+            </h2>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Gross Annual</span>
+                <span className="font-medium">{formatCurrency(conversions.annual)}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Federal Tax</span>
+                <span className="font-medium text-red-600">-{formatCurrency(federalTax)}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">FICA (SS + Medicare)</span>
+                <span className="font-medium text-red-600">-{formatCurrency(fica)}</span>
+              </div>
+              <div className="border-t pt-3 flex justify-between">
+                <span className="font-semibold text-gray-900">Estimated Take-Home</span>
+                <span className="font-bold text-green-700">{formatCurrency(takeHome)}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-600">Effective Tax Rate</span>
+                <span className="font-medium">{effectiveRate.toFixed(1)}%</span>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 mt-4">
+              This is a rough estimate for single filers with no deductions. Actual take-home varies by state, filing status, and deductions.
+            </p>
+          </div>
+        );
+      })()}
 
       {/* Quick Reference Table */}
       <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
