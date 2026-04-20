@@ -1,6 +1,6 @@
 import { writeFileSync } from "fs";
 
-const DOMAIN = "https://salaryconverter.com";
+const DOMAIN = "https://salaryconverter.net";
 
 const urls = ["/"];
 
