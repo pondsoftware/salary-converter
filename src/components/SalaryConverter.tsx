@@ -216,7 +216,7 @@ export default function SalaryConverter() {
             <select
               value={inputMode}
               onChange={(e) => setInputMode(e.target.value as InputMode)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-200 focus:border-cyan-600"
             >
               {Object.entries(INPUT_LABELS).map(([key, label]) => (
                 <option key={key} value={key}>
@@ -239,7 +239,7 @@ export default function SalaryConverter() {
                 onChange={(e) => setAmount(Number(e.target.value))}
                 min={0}
                 step={inputMode === "hourly" ? 0.5 : inputMode === "annual" ? 1000 : 1}
-                className="w-full pl-7 pr-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pl-7 pr-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-200 focus:border-cyan-600"
               />
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function SalaryConverter() {
               onChange={(e) => setHoursPerWeek(Number(e.target.value))}
               min={1}
               max={80}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-200 focus:border-cyan-600"
             />
           </div>
           <div>
@@ -266,7 +266,7 @@ export default function SalaryConverter() {
               onChange={(e) => setWeeksPerYear(Number(e.target.value))}
               min={1}
               max={52}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-200 focus:border-cyan-600"
             />
           </div>
           <div>
@@ -280,7 +280,7 @@ export default function SalaryConverter() {
                 onChange={(e) => setPaidHolidays(Number(e.target.value))}
                 min={0}
                 max={30}
-                className="w-full pr-14 pl-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pr-14 pl-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-200 focus:border-cyan-600"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">
                 days
@@ -298,7 +298,7 @@ export default function SalaryConverter() {
                 onChange={(e) => setPtoDays(Number(e.target.value))}
                 min={0}
                 max={60}
-                className="w-full pr-14 pl-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pr-14 pl-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-200 focus:border-cyan-600"
               />
               <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm">
                 days
@@ -326,7 +326,7 @@ export default function SalaryConverter() {
               key={label}
               className={`rounded-lg border p-4 text-center ${
                 label.toLowerCase() === inputMode
-                  ? "border-blue-300 bg-blue-50"
+                  ? "border-cyan-300 bg-cyan-50"
                   : "border-gray-200"
               }`}
             >
@@ -429,7 +429,7 @@ export default function SalaryConverter() {
               <select
                 value={colBase}
                 onChange={(e) => setColBase(e.target.value)}
-                className="w-full sm:w-72 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full sm:w-72 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-cyan-200 focus:border-cyan-600"
               >
                 <option value="national">National Average (100)</option>
                 {US_METROS.map(metro => (

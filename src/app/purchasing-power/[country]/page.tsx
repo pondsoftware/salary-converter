@@ -105,7 +105,7 @@ export default async function PurchasingPowerPage({
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-blue-600">
+          <Link href="/" className="hover:text-cyan-700">
             Salary Converter
           </Link>
           <span className="mx-2">/</span>
@@ -119,15 +119,15 @@ export default async function PurchasingPowerPage({
         </h1>
 
         {/* Quick Answer Card */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-          <p className="text-lg text-blue-900 font-semibold">
+        <div className="bg-cyan-50 border border-cyan-200 rounded-lg p-6 mb-8">
+          <p className="text-lg text-cyan-900 font-semibold">
             {c.flag} {c.name} has a PPP index of {c.pppIndex}{" "}
-            <span className="font-normal text-blue-700">(US = 100)</span>
+            <span className="font-normal text-cyan-700">(US = 100)</span>
           </p>
-          <p className="text-sm text-blue-700 mt-2">
+          <p className="text-sm text-cyan-700 mt-2">
             A $60,000 US salary has the purchasing power of {formatCurrency(equivalent60k)} in {c.name}.
           </p>
-          <p className="text-sm text-blue-700 mt-1">
+          <p className="text-sm text-cyan-700 mt-1">
             {c.pppIndex < 100
               ? `Your dollar goes ${percentageDiff}% further in ${c.name}.`
               : `${c.name} is ${percentageDiff}% more expensive than the US.`}
@@ -220,13 +220,13 @@ export default async function PurchasingPowerPage({
                 {COUNTRIES.sort((a, b) => b.pppIndex - a.pppIndex).map((ct) => (
                   <tr
                     key={ct.slug}
-                    className={ct.slug === c.slug ? "bg-blue-50 font-semibold" : ""}
+                    className={ct.slug === c.slug ? "bg-cyan-50 font-semibold" : ""}
                   >
                     <td className="px-6 py-3 text-gray-900">
                       {ct.slug === c.slug ? (
                         <span>{ct.flag} {ct.name}</span>
                       ) : (
-                        <Link href={`/purchasing-power/${ct.slug}`} className="text-blue-600 hover:underline">
+                        <Link href={`/purchasing-power/${ct.slug}`} className="text-cyan-700 hover:underline">
                           {ct.flag} {ct.name}
                         </Link>
                       )}
@@ -246,7 +246,7 @@ export default async function PurchasingPowerPage({
         <div className="text-center mb-8">
           <Link
             href="/"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
+            className="inline-block bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-cyan-800 transition"
           >
             Use the Full Salary Converter
           </Link>

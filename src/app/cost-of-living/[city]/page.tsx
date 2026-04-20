@@ -110,7 +110,7 @@ export default async function CostOfLivingPage({
       <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-blue-600">
+          <Link href="/" className="hover:text-cyan-700">
             Salary Converter
           </Link>
           <span className="mx-2">/</span>
@@ -124,12 +124,12 @@ export default async function CostOfLivingPage({
         </h1>
 
         {/* Quick Answer Card */}
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-          <p className="text-lg text-blue-900 font-semibold">
+        <div className="bg-cyan-50 border border-cyan-200 rounded-lg p-6 mb-8">
+          <p className="text-lg text-cyan-900 font-semibold">
             {metro.name} has a cost of living index of {metro.index}{" "}
-            <span className="font-normal text-blue-700">(national average = 100)</span>
+            <span className="font-normal text-cyan-700">(national average = 100)</span>
           </p>
-          <p className="text-sm text-blue-700 mt-2">
+          <p className="text-sm text-cyan-700 mt-2">
             A $60,000 national average salary is equivalent to {formatCurrency(equivalent60k)} in {metro.name}.
           </p>
         </div>
@@ -218,13 +218,13 @@ export default async function CostOfLivingPage({
                 {US_METROS.sort((a, b) => b.index - a.index).map((m) => (
                   <tr
                     key={m.slug}
-                    className={m.slug === metro.slug ? "bg-blue-50 font-semibold" : ""}
+                    className={m.slug === metro.slug ? "bg-cyan-50 font-semibold" : ""}
                   >
                     <td className="px-6 py-3 text-gray-900">
                       {m.slug === metro.slug ? (
                         m.name
                       ) : (
-                        <Link href={`/cost-of-living/${m.slug}`} className="text-blue-600 hover:underline">
+                        <Link href={`/cost-of-living/${m.slug}`} className="text-cyan-700 hover:underline">
                           {m.name}
                         </Link>
                       )}
@@ -244,7 +244,7 @@ export default async function CostOfLivingPage({
         <div className="text-center mb-8">
           <Link
             href="/"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
+            className="inline-block bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-cyan-800 transition"
           >
             Use the Full Salary Converter
           </Link>
