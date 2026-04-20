@@ -13,10 +13,31 @@ const salaryAmounts = [
   175000, 200000,
 ];
 
+const costOfLivingCities = [
+  "san-francisco", "new-york-city", "los-angeles", "seattle", "boston",
+  "washington-dc", "denver", "austin", "chicago", "miami", "atlanta",
+  "phoenix", "dallas-fort-worth", "houston", "minneapolis", "nashville",
+  "raleigh", "salt-lake-city", "kansas-city", "indianapolis", "columbus",
+  "san-antonio", "pittsburgh", "oklahoma-city", "memphis",
+];
+
+const salaryInCurrencies = [
+  "eur", "gbp", "cad", "aud", "jpy", "chf", "inr", "mxn", "brl", "cny", "krw", "sek",
+];
+
+const purchasingPowerCountries = [
+  "switzerland", "norway", "australia", "united-kingdom", "canada", "germany",
+  "france", "japan", "south-korea", "spain", "portugal", "mexico", "brazil",
+  "thailand", "india", "vietnam", "philippines", "colombia",
+];
+
 const urls = [
   "/",
   ...hourlyRates.map((rate) => `/hourly-to-salary/${rate}`),
   ...salaryAmounts.map((amount) => `/salary-to-hourly/${amount}`),
+  ...costOfLivingCities.map((city) => `/cost-of-living/${city}`),
+  ...salaryInCurrencies.map((currency) => `/salary-in/${currency}`),
+  ...purchasingPowerCountries.map((country) => `/purchasing-power/${country}`),
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
