@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: "Salary Converter — Hourly, Weekly, Monthly, Yearly",
   description:
     "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
+  openGraph: {
+    title: "Salary Converter",
+    description:
+      "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
+    type: "website",
+    url: "https://salaryconverter.net",
+    siteName: "Salary Converter",
+  },
+  twitter: {
+    card: "summary",
+    title: "Salary Converter",
+    description:
+      "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
+  },
 };
 
 export default function RootLayout({
