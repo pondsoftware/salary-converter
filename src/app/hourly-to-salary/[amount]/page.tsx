@@ -10,12 +10,13 @@ export function generateStaticParams() {
   return HOURLY_RATES.map((rate) => ({ amount: String(rate) }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { amount: string };
-}): Metadata {
-  const hourly = parseFloat(params.amount);
+  params: Promise<{ amount: string }>;
+}): Promise<Metadata> {
+  const { amount } = await params;
+  const hourly = parseFloat(amount);
   const annual = hourly * 2080;
   const formattedHourly = hourly % 1 === 0 ? `$${hourly}` : `$${hourly.toFixed(2)}`;
   const formattedAnnual = annual.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
@@ -65,12 +66,13 @@ function calculateTakeHome(annual: number) {
   return { federalTax, fica, takeHome, effectiveRate };
 }
 
-export default function HourlyToSalaryPage({
+export default async function HourlyToSalaryPage({
   params,
 }: {
-  params: { amount: string };
+  params: Promise<{ amount: string }>;
 }) {
-  const hourly = parseFloat(params.amount);
+  const { amount } = await params;
+  const hourly = parseFloat(amount);
   const daily = hourly * 8;
   const weekly = hourly * 40;
   const biweekly = weekly * 2;
@@ -115,7 +117,7 @@ export default function HourlyToSalaryPage({
         "@type": "ListItem",
         position: 2,
         name: `${formattedHourly}/hr to Salary`,
-        item: `https://salaryconverter.net/hourly-to-salary/${params.amount}`,
+        item: `https://salaryconverter.net/hourly-to-salary/${amount}`,
       },
     ],
   };
