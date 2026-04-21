@@ -1,35 +1,86 @@
-import { writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const projectRoot = resolve(__dirname, "..");
+
+// Read all dynamic route files to extract their parameters directly from source.
+// This ensures the sitemap always matches what generateStaticParams produces.
+
+function extractArrayFromSource(source, varName) {
+  // Matches: const VARNAME = [ ... ];
+  const regex = new RegExp(
+    `(?:const|let|var)\\s+${varName}\\s*=\\s*\\[([\\s\\S]*?)\\];`
+  );
+  const match = source.match(regex);
+  if (!match) return null;
+  return match[1];
+}
+
+function extractNumbers(arrayContent) {
+  return [...arrayContent.matchAll(/[\d.]+/g)].map((m) => parseFloat(m[0]));
+}
+
+function extractSlugs(arrayContent) {
+  return [...arrayContent.matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]);
+}
+
+// --- Hourly to Salary ---
+const hourlySource = readFileSync(
+  resolve(projectRoot, "src/app/hourly-to-salary/[amount]/page.tsx"),
+  "utf8"
+);
+const hourlyArrayContent = extractArrayFromSource(hourlySource, "HOURLY_RATES");
+const hourlyRates = extractNumbers(hourlyArrayContent);
+
+// --- Salary to Hourly ---
+const salarySource = readFileSync(
+  resolve(projectRoot, "src/app/salary-to-hourly/[amount]/page.tsx"),
+  "utf8"
+);
+const salaryArrayContent = extractArrayFromSource(salarySource, "SALARY_AMOUNTS");
+const salaryAmounts = extractNumbers(salaryArrayContent);
+
+// --- Cost of Living ---
+const colSource = readFileSync(
+  resolve(projectRoot, "src/app/cost-of-living/[city]/page.tsx"),
+  "utf8"
+);
+const colArrayContent = extractArrayFromSource(colSource, "US_METROS");
+const costOfLivingCities = extractSlugs(colArrayContent);
+
+// --- Salary In Currency ---
+const currencySource = readFileSync(
+  resolve(projectRoot, "src/app/salary-in/[currency]/page.tsx"),
+  "utf8"
+);
+const currencyArrayContent = extractArrayFromSource(currencySource, "CURRENCIES");
+const salaryInCurrencies = extractSlugs(currencyArrayContent);
+
+// --- Purchasing Power ---
+const ppSource = readFileSync(
+  resolve(projectRoot, "src/app/purchasing-power/[country]/page.tsx"),
+  "utf8"
+);
+const ppArrayContent = extractArrayFromSource(ppSource, "COUNTRIES");
+const purchasingPowerCountries = extractSlugs(ppArrayContent);
+
+// Validate all data was extracted
+const checks = [
+  ["hourlyRates", hourlyRates],
+  ["salaryAmounts", salaryAmounts],
+  ["costOfLivingCities", costOfLivingCities],
+  ["salaryInCurrencies", salaryInCurrencies],
+  ["purchasingPowerCountries", purchasingPowerCountries],
+];
+for (const [name, arr] of checks) {
+  if (!arr || arr.length === 0) {
+    throw new Error(`Failed to extract ${name} from source files`);
+  }
+}
 
 const DOMAIN = "https://salaryconverter.net";
-
-const hourlyRates = [
-  7.25, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
-  28, 29, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100,
-];
-
-const salaryAmounts = [
-  25000, 30000, 35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000,
-  80000, 85000, 90000, 95000, 100000, 110000, 120000, 130000, 140000, 150000,
-  175000, 200000,
-];
-
-const costOfLivingCities = [
-  "san-francisco", "new-york-city", "los-angeles", "seattle", "boston",
-  "washington-dc", "denver", "austin", "chicago", "miami", "atlanta",
-  "phoenix", "dallas-fort-worth", "houston", "minneapolis", "nashville",
-  "raleigh", "salt-lake-city", "kansas-city", "indianapolis", "columbus",
-  "san-antonio", "pittsburgh", "oklahoma-city", "memphis",
-];
-
-const salaryInCurrencies = [
-  "eur", "gbp", "cad", "aud", "jpy", "chf", "inr", "mxn", "brl", "cny", "krw", "sek",
-];
-
-const purchasingPowerCountries = [
-  "switzerland", "norway", "australia", "united-kingdom", "canada", "germany",
-  "france", "japan", "south-korea", "spain", "portugal", "mexico", "brazil",
-  "thailand", "india", "vietnam", "philippines", "colombia",
-];
 
 const urls = [
   "/",
@@ -53,5 +104,5 @@ ${urls
   .join("\n")}
 </urlset>`;
 
-writeFileSync("public/sitemap.xml", sitemap);
-console.log(`Sitemap generated: ${urls.length} URLs`);
+writeFileSync(resolve(projectRoot, "public/sitemap.xml"), sitemap);
+console.log(`Sitemap generated: ${urls.length} URLs (${hourlyRates.length} hourly, ${salaryAmounts.length} salary, ${costOfLivingCities.length} cities, ${salaryInCurrencies.length} currencies, ${purchasingPowerCountries.length} countries)`);
