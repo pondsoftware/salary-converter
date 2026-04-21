@@ -1,5 +1,16 @@
 import SalaryConverter from "@/components/SalaryConverter";
 
+const webAppJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Salary Converter",
+  description: "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
+  url: "https://salaryconverter.net",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Any",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+};
+
 export default function Home() {
   const faqs = [
     {
@@ -26,6 +37,7 @@ export default function Home() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }} />
       <SalaryConverter />
 
       <section className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
