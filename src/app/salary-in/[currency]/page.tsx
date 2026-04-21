@@ -15,12 +15,25 @@ const CURRENCIES = [
   { code: "CNY", slug: "cny", name: "Chinese Yuan", symbol: "\u00a5", rate: 7.24 },
   { code: "KRW", slug: "krw", name: "South Korean Won", symbol: "\u20a9", rate: 1345 },
   { code: "SEK", slug: "sek", name: "Swedish Krona", symbol: "kr ", rate: 10.65 },
+  { code: "THB", slug: "thb", name: "Thai Baht", symbol: "\u0e3f", rate: 35.8 },
+  { code: "VND", slug: "vnd", name: "Vietnamese Dong", symbol: "\u20ab", rate: 25415 },
+  { code: "TRY", slug: "try", name: "Turkish Lira", symbol: "\u20ba", rate: 32.4 },
+  { code: "PLN", slug: "pln", name: "Polish Zloty", symbol: "z\u0142", rate: 4.02 },
+  { code: "CZK", slug: "czk", name: "Czech Koruna", symbol: "K\u010d", rate: 23.15 },
+  { code: "HUF", slug: "huf", name: "Hungarian Forint", symbol: "Ft ", rate: 365.5 },
+  { code: "ILS", slug: "ils", name: "Israeli Shekel", symbol: "\u20aa", rate: 3.67 },
+  { code: "ZAR", slug: "zar", name: "South African Rand", symbol: "R ", rate: 18.45 },
+  { code: "NGN", slug: "ngn", name: "Nigerian Naira", symbol: "\u20a6", rate: 1550 },
+  { code: "EGP", slug: "egp", name: "Egyptian Pound", symbol: "E\u00a3", rate: 48.9 },
+  { code: "COP", slug: "cop", name: "Colombian Peso", symbol: "COL$", rate: 3945 },
+  { code: "CLP", slug: "clp", name: "Chilean Peso", symbol: "CL$", rate: 940 },
+  { code: "PEN", slug: "pen", name: "Peruvian Sol", symbol: "S/", rate: 3.72 },
 ];
 
 const USD_SALARIES = [25000, 30000, 40000, 50000, 60000, 75000, 100000, 125000, 150000, 200000];
 
 function formatForeignCurrency(value: number, symbol: string, code: string): string {
-  if (code === "JPY" || code === "KRW") {
+  if (["JPY", "KRW", "VND", "HUF", "NGN", "COP", "CLP"].includes(code)) {
     return `${symbol}${formatNumber(Math.round(value))}`;
   }
   return `${symbol}${formatNumber(value, 2)}`;
@@ -51,7 +64,7 @@ export async function generateMetadata({
   const { currency } = await params;
   const curr = CURRENCIES.find((c) => c.slug === currency)!;
   const converted = 60000 * curr.rate;
-  const formattedAmount = curr.code === "JPY" || curr.code === "KRW"
+  const formattedAmount = ["JPY", "KRW", "VND", "HUF", "NGN", "COP", "CLP"].includes(curr.code)
     ? formatNumber(Math.round(converted))
     : formatNumber(converted, 2);
 

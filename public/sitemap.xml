@@ -11,7 +11,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/hourly-to-salary/8</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/hourly-to-salary/9</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/hourly-to-salary/10</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/hourly-to-salary/11</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -111,7 +126,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/hourly-to-salary/32</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/hourly-to-salary/35</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/hourly-to-salary/38</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -121,7 +146,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/hourly-to-salary/42</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/hourly-to-salary/45</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/hourly-to-salary/48</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -201,7 +236,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/42000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/salary-to-hourly/45000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/48000</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -211,7 +256,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/52000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/salary-to-hourly/55000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/58000</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -221,7 +276,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/62000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/salary-to-hourly/65000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/68000</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -231,7 +296,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/72000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/salary-to-hourly/75000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/78000</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -241,12 +316,27 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/82000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/salary-to-hourly/85000</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/88000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/salary-to-hourly/90000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/92000</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -292,6 +382,11 @@
   </url>
   <url>
     <loc>https://salaryconverter.net/salary-to-hourly/200000</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-to-hourly/250000</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -421,6 +516,101 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/cost-of-living/portland</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/charlotte</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/jacksonville</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/fort-worth</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/milwaukee</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/baltimore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/louisville</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/las-vegas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/tucson</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/fresno</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/sacramento</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/mesa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/omaha</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/cleveland</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/tampa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/new-orleans</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/cincinnati</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/st-louis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/cost-of-living/orlando</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/salary-in/eur</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -481,6 +671,71 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/salary-in/thb</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/vnd</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/try</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/pln</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/czk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/huf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/ils</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/zar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/ngn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/egp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/cop</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/clp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/salary-in/pen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/purchasing-power/switzerland</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -491,7 +746,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/purchasing-power/denmark</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/purchasing-power/australia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/ireland</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/finland</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/belgium</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/austria</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -516,6 +796,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/purchasing-power/israel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/purchasing-power/japan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -531,7 +816,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/purchasing-power/greece</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/czech-republic</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/purchasing-power/portugal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/poland</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/hungary</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/turkey</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/chile</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -546,17 +861,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://salaryconverter.net/purchasing-power/south-africa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://salaryconverter.net/purchasing-power/thailand</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://salaryconverter.net/purchasing-power/india</loc>
+    <loc>https://salaryconverter.net/purchasing-power/peru</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://salaryconverter.net/purchasing-power/vietnam</loc>
+    <loc>https://salaryconverter.net/purchasing-power/colombia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -566,7 +886,22 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://salaryconverter.net/purchasing-power/colombia</loc>
+    <loc>https://salaryconverter.net/purchasing-power/india</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/egypt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/vietnam</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://salaryconverter.net/purchasing-power/nigeria</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
