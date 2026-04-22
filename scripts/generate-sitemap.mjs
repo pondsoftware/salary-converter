@@ -84,6 +84,7 @@ const DOMAIN = "https://salaryconverter.net";
 
 const urls = [
   "/",
+  "/browse",
   ...hourlyRates.map((rate) => `/hourly-to-salary/${rate}`),
   ...salaryAmounts.map((amount) => `/salary-to-hourly/${amount}`),
   ...costOfLivingCities.map((city) => `/cost-of-living/${city}`),
