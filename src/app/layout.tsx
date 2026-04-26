@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   },
   title: "Salary Converter — Hourly, Weekly, Monthly, Yearly",
   description:
-    "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
+    "Convert salary to hourly, weekly, monthly, or annual pay. Accounts for overtime, PTO, and hours worked to show your true effective rate.",
   openGraph: {
     title: "Salary Converter",
     description:
-      "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
+      "Convert salary to hourly, weekly, monthly, or annual pay. Accounts for overtime, PTO, and hours worked to show your true effective rate.",
     type: "website",
     url: "https://salaryconverter.net",
     siteName: "Salary Converter",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Salary Converter",
     description:
-      "Free salary converter. Convert between hourly, daily, weekly, biweekly, monthly, and annual pay. See how overtime, PTO, and work hours affect your real earnings.",
+      "Convert salary to hourly, weekly, monthly, or annual pay. Accounts for overtime, PTO, and hours worked to show your true effective rate.",
   },
 };
 
